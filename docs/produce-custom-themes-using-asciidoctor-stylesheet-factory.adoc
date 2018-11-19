@@ -13,9 +13,9 @@ endif::[]
 :showcase-ref: http://themes.asciidoctor.org/preview/
 :compass-ref: http://compass-style.org
 :sass-ref: http://sass-lang.com
-:uri-foundation: http://foundation.zurb.com
-:get-ruby-ref: http://www.ruby-lang.org/en/downloads
-:bundler-ref: http://rubygems.org/gems/bundler
+:uri-foundation: https://foundation.zurb.com
+:get-ruby-ref: https://www.ruby-lang.org/en/downloads
+:bundler-ref: https://rubygems.org/gems/bundler
 :convert-ref: {docref}/convert-documents
 :quick-ref: {docref}/asciidoc-syntax-quick-reference
 :user-ref: {docref}/user-manual
@@ -151,6 +151,12 @@ include::{includedir}/create-theme.adoc[]
 include::{includedir}/apply-theme.adoc[]
 
 Happy theming!
+
+== Additional themes for Asciidoctor
+
+The https://github.com/darshandsoni/asciidoctor-skins[asciidoctor-skins] repository has additional stylesheets that can be used to theme your AsciiDoc-based documentation.
+These stylesheets are specifically created for users who want to style their documents without having to dive into writing custom CSS.
+The stylesheets in asciidoctor-skins import the default stylesheet first, then overlay an alternate theme (in other words, a "`skin`").
 
 == Resources and help
 

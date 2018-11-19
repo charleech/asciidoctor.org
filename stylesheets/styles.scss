@@ -508,7 +508,7 @@ table.tableblock.fit-content > caption.title {
 .exampleblock > .content {
   @include panel($body-bg, $panel-padding, false);
   @include radius;
-  background-color: #fffef7;
+  /*background-color: #fffef7;*/
   border-color: $panel-border-color;
   @include single-box-shadow(0, 1px, 4px, null, $panel-border-color);
   padding-bottom: 0; // we force a margin-bottom on the last child instead
@@ -526,7 +526,13 @@ table.tableblock.fit-content > caption.title {
   @include panel($panel-bg, $panel-padding, false);
   @include radius;
 
-  padding-bottom: 0; // we force a margin-bottom on the last child in content instead
+  padding-bottom: 0; // we add a margin-bottom using an after pseudo-element instead
+
+  &:after {
+    display: block;
+    content: "";
+    margin-bottom: emCalc(20px);
+  }
 
   & > .content {
     & > .title {
@@ -536,9 +542,6 @@ table.tableblock.fit-content > caption.title {
       //line-height: 1.45;
       margin-top: 0; // override margin increase we use to separate sections
       //border-bottom: $hr-border-width $hr-border-style $hr-border-color;
-    }
-    & > :last-child {
-      margin-bottom: emCalc(20px);
     }
   }
 

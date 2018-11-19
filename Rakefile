@@ -49,6 +49,8 @@ $install_gems = ['awestruct -v "0.5.5"', 'rb-inotify -v "~> 0.9.0"']
 $awestruct_cmd = nil
 task :default => :preview
 
+TrailingWhitespaceRx = /\s+$/
+
 desc 'Setup the environment to run Awestruct'
 task :setup, [:env] => :init do |task, args|
   next if !which('awestruct').nil?
@@ -129,6 +131,9 @@ task :netlify do
   # TODO set_pub_dates 'master'
   url_opt = %( -u #{ENV['DEPLOY_PRIME_URL']}) unless profile == 'production'
   run_awestruct %(-P #{profile}#{url_opt} -g --force -q), :spawn => false
+  IO.write '_site/humans.txt', (IO.readlines 'humans.txt', mode: 'r:UTF-8', newline: :universal).map {|line|
+    line == %(Last update:\n) ? %(Last update: #{Time.new.strftime '%Y/%m/%d'}\n) : line
+  }.join
 end
 
 desc 'Generate site from Travis CI and, if not a pull request, publish site to production (GitHub Pages)'
@@ -249,6 +254,10 @@ task :pr do
 end
 
 task :lint do
+  reject_trailing_whitespace
+end
+
+task :validate do
   run_proofer
 end
 
@@ -388,12 +397,12 @@ def set_pub_dates(branch)
 end
 
 def reject_trailing_whitespace
-  Dir['**/*.adoc'].each do |file|
-    # Don't check external gems.
-    next if file =~ /^vendor\//
-    IO.readlines(file).each_with_index do |ln, i|
-      ln.chomp!
-      raise "#{file} contains trailing whitespace on line #{i + 1}" if ln =~ /\s+\Z/
+  # NOTE hidden directories are automatically ignored
+  Dir['**/*.adoc'].each do |filename|
+    next if filename.start_with? 'vendor/'
+    (lines = IO.readlines filename).each_with_index do |line, i|
+      raise %(#{filename} contains trailing whitespace on line #{i + 1}) if TrailingWhitespaceRx.match? line.chomp
     end
+    raise %(#{filename} contains trailing blank lines) if (last_line = lines[-1]) && last_line.chomp.empty?
   end
 end

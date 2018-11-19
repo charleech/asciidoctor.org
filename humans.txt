@@ -10,7 +10,8 @@ Twitter: @carbonfray
 From: Denver, CO
 
 /* SITE */
+Last update:
 Language: English
 Standards: HTML5, CSS3
 Components: Foundation, Normalize, Modernizr, jQuery, FontAwesome, highlight.js
-Software: Ruby (RVM), Awestruct, Asciidoctor (AsciiDoc), Tilt, Slim, Haml, Git, VIM, Rake, Travis CI
+Software: Ruby (RVM), Awestruct, Asciidoctor (AsciiDoc), Tilt, Slim, Haml, Git, VIM, Rake, Netlify, Travis CI

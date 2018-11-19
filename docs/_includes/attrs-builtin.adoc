@@ -347,6 +347,13 @@ Can be any inline macro, such as a URL.
 |{y}
 |<<doc-header>>
 
+|favicon
+|Adds a link to a favicon to the HTML `<head>`.
+|_not set_
+|_any_
+|{y}
+|<<favicon>>
+
 |firstname
 |Sets the author's first name.
 Can be set automatically via the author info line.
@@ -356,7 +363,7 @@ Can be set automatically via the author info line.
 |<<doc-header>>
 
 |front-matter
-|If `skip-front-matter` is set, holds any YAML-style frontmatter skimmed from the top of the document.
+|If `skip-front-matter` is set via the CLI or API, any YAML-style frontmatter skimmed from the top of the document is stored in this attribute.
 |Front matter content, if captured.
 |_any_
 |{y}
@@ -573,6 +580,8 @@ _Since this is a reserved attribute that has special behavior, you should avoid 
 
 |eqnums
 |Controls automatic equation numbering on LaTeX blocks in HTML output (MathJax).
+If the value is AMS, only LaTeX content enclosed in an `\begin{equation}\...\end{equation}` container will be numbered.
+If the value is all, then all LaTeX blocks will be numbered.
 |_not set_ (Equation numbering is off)
 |_empty_ (alias for AMS), AMS, all or none
 |{y}

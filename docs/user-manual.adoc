@@ -43,16 +43,16 @@ Sarah White <https://github.com/graphitefriction[@graphitefriction]>; Dan Allen 
 :adr: Asciidoctor
 // Refs
 :uri-home: https://asciidoctor.org
-:uri-gem: http://rubygems.org/gems/asciidoctor
+:uri-gem: https://rubygems.org/gems/asciidoctor
 :uri-org: https://github.com/asciidoctor
 :uri-repo: {uri-org}/asciidoctor
 :uri-tilt: https://github.com/rtomayko/tilt
-:uri-jruby: http://jruby.org
+:uri-jruby: https://www.jruby.org
 :uri-man: {uri-home}/man/asciidoctor
 :uri-rewrite: https://github.com/ocpsoft/rewrite/tree/master/transform-markup
-:markup-ref: http://en.wikipedia.org/wiki/Lightweight_markup_language
-:markdown-ref: http://daringfireball.net/projects/markdown
-:fedora-docs: http://docs.fedoraproject.org
+:markup-ref: https://en.wikipedia.org/wiki/Lightweight_markup_language
+:markdown-ref: https://daringfireball.net/projects/markdown
+:fedora-docs: https://docs.fedoraproject.org
 :java: https://asciidoctor.org/docs/asciidoctorj
 :uri-anttask: https://github.com/asciidoctor/asciidoctor-ant#asciidoctor-ant-task
 :tests: https://github.com/asciidoctor/asciidoctor/tree/master/test
@@ -61,14 +61,14 @@ Sarah White <https://github.com/graphitefriction[@graphitefriction]>; Dan Allen 
 :doc-asciidoctorj: {docref}/asciidoctorj
 :editing-ref: {docref}/editing-asciidoc-with-live-preview
 :asciidoclet-ref: {docref}/install-and-use-asciidoclet/
-:docbook-info-ref: http://www.docbook.org/tdg5/en/html/info.html
+:docbook-info-ref: https://tdg.docbook.org/tdg/5.0/info.html
 :richfaces-docinfo: https://github.com/richfaces/richfaces-docs/blob/master/Developer_Guide/src/main/docbook/en-US/Developer_Guide-docinfo.xml
-:air-ref: http://en.wikipedia.org/wiki/Air_quotes
-:uri-xml: http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references
-:uri-unicode: http://en.wikipedia.org/wiki/List_of_Unicode_characters
-:fontawesome-ref: http://fortawesome.github.io/Font-Awesome/
+:air-ref: https://en.wikipedia.org/wiki/Air_quotes
+:uri-xml: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references
+:uri-unicode: https://en.wikipedia.org/wiki/List_of_Unicode_characters
+:fontawesome-ref: https://fontawesome.com/v4.7.0
 :factory-ref: https://github.com/asciidoctor/asciidoctor-stylesheet-factory
-:uri-http: http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html
+:uri-http: https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html
 :pygments-org: http://pygments.org
 :pygments-gem: https://rubygems.org/gems/pygments.rb
 :pygments-lang: {pygments-org}/languages/
@@ -77,9 +77,9 @@ Sarah White <https://github.com/graphitefriction[@graphitefriction]>; Dan Allen 
 :highlightjs-org: https://highlightjs.org/
 :highlightjs-lang: https://highlightjs.org/download/
 :showcase-ref: http://themes.asciidoctor.org/preview/
-:uri-docbook5: http://www.docbook.org/tdg5/en/html/ch01.html#introduction-whats-new
+:uri-docbook5: https://tdg.docbook.org/tdg/5.0/ch01.html#introduction-whats-new
 :uri-yelp: https://wiki.gnome.org/action/show/Apps/Yelp
-:publican: http://fedorahosted.org/publican
+:publican: https://sourceware.org/publican
 :uri-a2x-manpage: http://asciidoc.org/a2x.1.html
 :man-raw: https://raw.githubusercontent.com/asciidoctor/asciidoctor/master/man/asciidoctor.adoc
 :fopub-ref: https://github.com/asciidoctor/asciidoctor-fopub
@@ -88,9 +88,9 @@ Sarah White <https://github.com/graphitefriction[@graphitefriction]>; Dan Allen 
 :backend-git: https://github.com/asciidoctor/asciidoctor-backends
 :compass-ref: http://compass-style.org
 :sass-ref: http://sass-lang.com
-:uri-foundation: http://foundation.zurb.com
-:get-ruby-ref: http://www.ruby-lang.org/en/downloads
-:bundler-ref: http://rubygems.org/gems/bundler
+:uri-foundation: https://foundation.zurb.com
+:get-ruby-ref: https://www.ruby-lang.org/en/downloads
+:bundler-ref: https://rubygems.org/gems/bundler
 :issue-ref: https://github.com/asciidoctor/asciidoctor/issues
 :license: https://github.com/asciidoctor/asciidoctor/blob/master/LICENSE
 :mojavelinux: https://github.com/mojavelinux
@@ -101,10 +101,10 @@ Sarah White <https://github.com/graphitefriction[@graphitefriction]>; Dan Allen 
 :contributors: https://github.com/asciidoctor/asciidoctor/graphs/contributors
 :gitscm-next: https://github.com/github/gitscm-next
 :seed-contribution: https://github.com/github/gitscm-next/commits/master/lib/asciidoc.rb
-:uri-asciimath: http://docs.mathjax.org/en/latest/asciimath.html
-:uri-latexmath: http://docs.mathjax.org/en/latest/tex.html
-:uri-mathjax: http://www.mathjax.org
-:uri-mathjax-docs: http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+:uri-asciimath: https://docs.mathjax.org/en/latest/asciimath.html
+:uri-latexmath: https://docs.mathjax.org/en/latest/tex.html
+:uri-mathjax: https://www.mathjax.org
+:uri-mathjax-docs: https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
 :uri-mailinglist: http://discuss.asciidoctor.org
 :uri-ad-org-issues: https://github.com/asciidoctor/asciidoctor.org/issues
 :uri-asciidoctorj: {uri-org}/asciidoctorj
@@ -114,6 +114,9 @@ Sarah White <https://github.com/graphitefriction[@graphitefriction]>; Dan Allen 
 :uri-asciidoctor-pdf: https://github.com/asciidoctor/asciidoctor-pdf
 :uri-asciidoctor-pdf-readme: https://github.com/asciidoctor/asciidoctor-pdf/blob/master/README.adoc
 :uri-asciidoctor-pdf-theming-guide: http://gist.asciidoctor.org/?github-asciidoctor%2Fasciidoctor-pdf%2F%2Fdocs%2Ftheming-guide.adoc
+:uri-asciidoctor-htmlbook: https://github.com/oreillymedia/asciidoctor-htmlbook
+:uri-svg-editor: https://petercollingridge.appspot.com/svg-editor
+:uri-svgo: https://github.com/svg/svgo
 
 [NOTE]
 ====
@@ -147,7 +150,7 @@ Asciidoctor also offers a modern, responsive theme based on {uri-foundation}[Fou
 
 === Compared to MarkDown
 
-include::{includedir}/asciidoc-vs-markdown.adoc[]
+include::asciidoc-vs-markdown.adoc[leveloffset=+2]
 
 = Quick Starts
 
@@ -161,6 +164,8 @@ include::{includedir}/command-line-usage.adoc[]
 == Using the Ruby API
 
 include::{includedir}/api-intro.adoc[]
+
+include::{includedir}/require-asciidoctor.adoc[]
 
 include::{includedir}/load-convert-api.adoc[]
 
@@ -256,6 +261,10 @@ include::{includedir}/attr-element.adoc[tag=pos]
 ==== Named Attribute
 
 include::{includedir}/attr-element.adoc[tag=name]
+
+==== Attribute List Substitutions
+
+include::{includedir}/attr-element.adoc[tag=subs]
 
 ==== Style
 
@@ -433,7 +442,8 @@ is effectively the same as:
 
 This is important for being able to assign document attributes in places where attribute entry lines are not normally processed, such as in a table cell.
 
-==== Catch a Missing or Undefined Attribute
+[#handle-missing-or-undefined-attributes]
+==== Handle Missing or Undefined Attributes [[catch-a-missing-or-undefined-attribute]]
 
 include::{includedir}/attr-miss.adoc[]
 
@@ -514,6 +524,10 @@ include::{includedir}/sections.adoc[tag=autoid]
 === Custom IDs
 
 include::{includedir}/sections.adoc[tag=custom-id]
+
+=== Multiple Anchors
+
+include::{includedir}/sections.adoc[tag=multiple-anchors]
 
 === Links
 
@@ -614,7 +628,7 @@ include::{includedir}/o-list-nest.adoc[]
 
 include::{includedir}/o-list-num.adoc[]
 
-== Labeled List
+== Description List
 
 include::{includedir}/dlist.adoc[]
 
@@ -739,7 +753,7 @@ include::{includedir}/image.adoc[]
 
 === Setting the Location of Images
 
-include::{includedir}/image-dir.adoc[]
+include::{includedir}/imagesdir.adoc[]
 
 ==== Include Images by Full URL
 
@@ -752,6 +766,10 @@ include::{includedir}/image-position.adoc[]
 === Sizing Images
 
 include::{includedir}/image-sizing.adoc[]
+
+=== Taming SVGs
+
+include::{includedir}/image-svg.adoc[]
 
 === Summary
 
@@ -1164,13 +1182,23 @@ AsciiDoc is a plugin for https://github.com/guard/guard[Guard] that converts wat
 
 Instructions for using the Guard/Live viewer are documented in the project's {guard-doc-ref}[README].
 
-== Process Multiple Source Files from the CLI
+== CLI Inputs and Outputs
+
+So far, you've seen how to pass a single input file to the CLI for it to convert.
+You can also convert multiple files at once, read content from STDIN, write content to STDOUT, or write content to a different output file or directory.
+This section explains the various input and output options of the CLI.
+
+=== Process Multiple Source Files from the CLI
 
 include::{includedir}/process-multi.adoc[]
 
-== Specifying an Output File
+=== Specifying an Output File
 
 include::{includedir}/file-output.adoc[]
+
+=== Piping Content Through the CLI
+
+include::{includedir}/io-piping.adoc[]
 
 == Running Asciidoctor Securely
 
@@ -1292,12 +1320,16 @@ include::{includedir}/static-awe.adoc[]
 include::{includedir}/api-intro.adoc[]
 --
 
+== Require the Library
+
+include::{includedir}/require-asciidoctor.adoc[]
+
 // FIXME this section is included twice in the manual
-== Load and Convert a File Using the API
+== Load and Convert Files
 
 include::{includedir}/load-convert-api.adoc[]
 
-=== Convert Strings
+== Load and Convert Strings
 
 include::{includedir}/string-api.adoc[]
 

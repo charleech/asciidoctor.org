@@ -23,9 +23,11 @@ IMPORTANT: The default CSS stylesheet (or any stylesheet produced by the {factor
 
 === Admonition Icons
 
-Here's an example using font icons, starting with the AsciiDoc source:
+When font-based icons are enabled, {adr} will draw the icons for the 5 built-in admonition types using Font Awesome.
 
-.Set icons attribute in the document header
+Here's an example that shows how to enable font-based icons, starting with the AsciiDoc source:
+
+.Set icons attribute to font in the document header
 [source]
 ----
 = Document Title
@@ -36,7 +38,7 @@ NOTE: Asciidoctor supports font-based admonition icons, powered by Font Awesome!
 
 Asciidoctor will then emit HTML markup that selects an appropriate font character from the Font Awesome font for each admonition block:
 
-.Result: HTML output when the icons attribute is set
+.Result: HTML output when the icons attribute is set to font
 [source,html]
 ----
 <div class="admonitionblock note">
@@ -65,7 +67,27 @@ Asciidoctor adds a reference to the Font Awesome stylesheet and font files serve
 [source,html]
 ----
 <link rel="stylesheet"
-  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css">
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+----
+
+The icons chosen are selected by the stylesheet.
+The default stylesheet maps icons to the following 5 CSS classes:
+
+* .admonitionblock td.icon .icon-note
+* .admonitionblock td.icon .icon-tip
+* .admonitionblock td.icon .icon-warning
+* .admonitionblock td.icon .icon-caution
+* .admonitionblock td.icon .icon-important
+
+If you want to customize the icon or the color that is used, you'll need to provide a custom stylesheet or override the styles using a docinfo file.
+Here's an example that shows how to change the icon for the note admonition to sticky note:
+
+[source,css]
+----
+.admonitionblock td.icon .icon-note::before {
+  content: "\f24a";
+  color:black;
+}
 ----
 
 ==== Unicode Admonition Icons
@@ -283,14 +305,14 @@ Here's an example of an icon with a link:
 
 [source]
 ----
-icon:download[link="http://rubygems.org/downloads/asciidoctor-1.5.2.gem"]
+icon:download[link="https://rubygems.org/downloads/asciidoctor-1.5.2.gem"]
 ----
 
 The previous example emits the following HTML:
 
 [source,xml]
 ----
-<span class="icon"><a class="image" href="http://rubygems.org/downloads/asciidoctor-1.5.2.gem"><i class="fa-download"></i></a></span>
+<span class="icon"><a class="image" href="https://rubygems.org/downloads/asciidoctor-1.5.2.gem"><i class="fa-download"></i></a></span>
 ----
 
 ==== Image Icon Attributes
@@ -313,3 +335,52 @@ The title of the image displayed when the mouse hovers over it (HTML converter)
 The role applied to the element that surrounds the icon
 
 Currently, the inline icon macro doesn't support any options to change its physical position (such as alignment left or right).
+
+=== Favicon
+
+When using Asciidoctor to generate a standalone HTML document (i.e., the `header_footer` option is `true`), you can instruct the processor to include a link to a favicon by setting the favicon attribute in the document header.
+
+[source]
+----
+= Document Title
+:favicon:
+----
+
+By default, the processor will add a link reference of type "icon" that refers to a file named _favicon.ico_ (relative to the HTML document):
+
+[source,html]
+----
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+----
+
+This reference gets added inside the HTML `<head>` tag (which explains why this feature is not available when generating an embeddable HTML document).
+
+To modify the name or location of the icon file, simply assign a value to the favicon attribute:
+
+[source,asciidoc]
+----
+= Document Title
+:favicon: ./images/favicon/favicon.png
+----
+
+This will now produce the following HTML tag:
+
+[source,html]
+----
+<link rel="icon" type="image/png" href="./images/favicon/favicon.png">
+----
+
+Notice the mimetype is automatically set based on the file extension of the image.
+
+The value of the `iconsdir` attribute is not prepend to the favicon path as it is with icons in the content.
+If you want this directory to be included in the favicon path, you must reference it explicitly:
+
+[source]
+----
+:favicon: {iconsdir}/favicon.png
+----
+
+TIP: If you're converting a set of AsciiDoc files in multiple directories for the purpose of making a website, and the favicon is located in a shared location, you'll likely want to use a forward slash (`/`) at the beginning of the favicon path.
+
+If you're looking for more control over how the favicon is declared, you should use a <<user-manual.adoc#head-docinfo-files,head docinfo file>>.
+Keep in mind that if you add an icon link in a head docinfo file and also set the favicon attribute, you'll end up with two icon links in the generated HTML document.
