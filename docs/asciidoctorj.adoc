@@ -1,9 +1,11 @@
 // NOTE include file is not resolved when reading the header only, hence the extra attributes
 :doctitle: AsciidoctorJ
-:revnumber: 1.5.8.1
+:revnumber: 2.1.0
 :gitref: v{revnumber}
 :keywords: AsciidoctorJ, Asciidoctor, AsciiDoc, Java bindings, JVM
 :page-keywords: {keywords}
 :page-layout: docs
 :uri-project-repo: https://github.com/asciidoctor/asciidoctorj
+:relfileprefix: {uri-project-repo}/blob/{gitref}/
+:relfilesuffix: .adoc
 include::https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctorj@{gitref}/README.adoc[]

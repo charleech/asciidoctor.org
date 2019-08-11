@@ -78,6 +78,7 @@ Sarah White <https://github.com/graphitefriction[@graphitefriction]>; Dan Allen 
 :highlightjs-lang: https://highlightjs.org/download/
 :showcase-ref: http://themes.asciidoctor.org/preview/
 :uri-docbook5: https://tdg.docbook.org/tdg/5.0/ch01.html#introduction-whats-new
+:uri-docbook45: https://github.com/asciidoctor/asciidoctor-docbook45
 :uri-yelp: https://wiki.gnome.org/action/show/Apps/Yelp
 :publican: https://sourceware.org/publican
 :uri-a2x-manpage: http://asciidoc.org/a2x.1.html
@@ -148,7 +149,7 @@ The Asciidoctor test suite has > 1,500 tests to ensure compatibility with the As
 In addition to the standard AsciiDoc syntax, Asciidoctor recognizes additional markup and formatting options, such as font-based icons (e.g., [x-]`icon:fire[]`) and UI elements (e.g., [x-]`btn:[Save]`).
 Asciidoctor also offers a modern, responsive theme based on {uri-foundation}[Foundation] to style the HTML5 output.
 
-=== Compared to MarkDown
+=== Compared to Markdown
 
 include::asciidoc-vs-markdown.adoc[leveloffset=+2]
 
@@ -964,6 +965,10 @@ include::{includedir}/icons.adoc[]
 [#syntax-highlighting]
 include::{includedir}/src.adoc[]
 
+=== Rouge
+
+include::{includedir}/src-rouge.adoc[]
+
 === Pygments
 
 include::{includedir}/src-pygments.adoc[]
@@ -1405,6 +1410,10 @@ include::{includedir}/exten-docinfo.adoc[]
 === Block Processor Example
 
 include::{includedir}/exten-block.adoc[]
+
+=== Compound Block Processor Example
+
+include::{includedir}/exten-block-compound.adoc[]
 
 === Block Macro Processor Example
 
