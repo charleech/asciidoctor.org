@@ -1,7 +1,5 @@
 var idMapping = {
-  '': '/asciidoctor/latest/',
-  'whats-unique-about-the-asciidoctor-implementation': '/asciidoctor/latest/features/',
-  'system-requirements': '/asciidoctor/latest/install/supported-platforms/'
+  '': '/epub3-converter/latest/'
 }
 var hash = window.location.hash
 var url = idMapping[hash.substr(1)] || idMapping[''].concat(hash)

@@ -49,8 +49,8 @@ var idMapping = {
   'screenshots': '/reveal.js-converter/latest/showcase/#screenshots',
   'contributing': '/reveal.js-converter/latest/project/contributing/',
   'copyright-and-licensing': '/reveal.js-converter/latest/project/license/',
-  'stay-connected': '/about/support/',
+  'stay-connected': '/about/support/'
 }
-
 var hash = window.location.hash
-window.location.href = 'https://docs.asciidoctor.org' + ((hash && idMapping[hash.slice(1)]) || (idMapping[''] + hash))
+var url = idMapping[hash.substr(1)] || idMapping[''].concat(hash)
+window.location.href = (url.substr(0, 8) === 'https://' ? '' : 'https://docs.asciidoctor.org').concat(url)
