@@ -35,7 +35,8 @@ It also brings an extended mathematical syntax for the AsciiDoc markup language 
 |Asciidoctor
 |An experimental playground for upcoming extensions.
 Used to test the capabilities of the extension mechanism and new extension ideas.
-
+Although the code in this repository is maintained by the Asciidoctor team, the code is untested and should not be used in production.
+The extensions are only intended to serve as a reference.
 |====
 
 NOTE: The label “official” simply means that the extension is hosted inside the Asciidoctor organization on GitHub and is maintained as part of the Asciidoctor project.
@@ -56,7 +57,11 @@ Extends the built-in HTML 5 converter to generate multiple HTML pages from a sin
 
 |https://github.com/CourseOrchestra/asciidoctor-open-document[Asciidoctor Open Document]
 |Asciidoctor
-|A converter for Asciidoctor that allows you to convert an AsciiDoc document into the fodt (plain Open Document) format.
+|A converter for Asciidoctor that allows you to convert an AsciiDoc document into the fodt (flat OpenDocument Text) format.
+
+|https://github.com/gregturn/asciidoctor-packt[Asciidoctor Packt]
+|Asciidoctor
+|A set of converter templates for Asciidoctor that allows you to convert an AsciiDoc document into the fodt (flat OpenDocument Text) format using the template for a Packt manuscript.
 
 |https://github.com/uniqueck/asciidoctorj-office-extension[Asciidoctor Office]
 |AsciidoctorJ
